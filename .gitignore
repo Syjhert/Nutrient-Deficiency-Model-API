@@ -1,3 +1,4 @@
-/dataset
-/.venv
-/.kaggle
+*/dataset
+*/.venv
+*/venv
+*/.kaggle
