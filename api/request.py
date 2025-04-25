@@ -3,7 +3,7 @@ import requests
 url = 'http://127.0.0.1:5000/predict' 
  
 # Define the input data(image) 
-image_path = 'rice_K.jpg'
+image_path = 'rice_K.JPG'
 
 # Make the request while the file is still open
 with open(image_path, "rb") as f:
