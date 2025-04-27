@@ -1,8 +1,12 @@
 import streamlit as st
+import os
 import numpy as np
 from PIL import Image
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image as keras_image
+
+# streamlit cloud cant find the model, so we debug :)
+print("Current directory:", os.getcwd()) 
 
 model = load_model('rice_deficiency_model.h5')
 
