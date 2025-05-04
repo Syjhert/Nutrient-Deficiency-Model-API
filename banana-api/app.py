@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 CORS(app)
 model = YOLO('yolo_banana_nutrient_best.pt')
-classes = ['boron', 'calcium', 'healthy', 'iron', 'magnesium', 'manganese', 'potassium', 'sulfur', 'zinc']
+classes = ['Boron', 'Calcium', 'Healthy', 'Iron', 'Magnesium', 'Manganese', 'Potassium', 'Sulfur', 'Zinc']
 
 @app.route('/keepalive', methods=['GET'])
 def api_health():
@@ -28,7 +28,7 @@ def predict():
     confidence = results[0].probs.data[pred].item()
 
     return jsonify({
-        "prediction": classes[pred],
+        "class": classes[pred],
         "confidence": round(confidence, 4)
     })
 
