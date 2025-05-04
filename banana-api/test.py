@@ -1,8 +1,8 @@
 import requests
 
-url = "https://nutrient-deficiency-api.onrender.com/predict"
+url = "https://nutrient-deficiency-model-api.onrender.com/predict"
 
-files = {'image': open("rice_K.jpg", 'rb')}
+files = {'image': open("boron.jpg", 'rb')}
 response = requests.post(url, files=files)
 
 print("Status code:", response.status_code)
