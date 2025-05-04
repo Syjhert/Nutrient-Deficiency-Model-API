@@ -4,9 +4,13 @@ import numpy as np
 from PIL import Image
 from ultralytics import YOLO
 
-model = YOLO("banana-streamlit/yolo_banana_nutrient_best.pt")
-# model = YOLO("yolo_banana_nutrient_best.pt")
-# model = load_model('rice_deficiency_model.h5')
+@st.cache_resource
+def load_model():
+    return YOLO("banana-streamlit/yolo-banana-nutrient-best.pt")
+    # model = YOLO("yolo_banana_nutrient_best.pt")
+
+
+model = load_model()
 
 classes = ['Boron', 'Calcium', 'Healthy', 'Iron', 'Magnesium', 'Manganese', 'Potassium', 'Sulfur', 'Zinc']
 
