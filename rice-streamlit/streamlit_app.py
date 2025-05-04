@@ -8,8 +8,8 @@ from tensorflow.keras.preprocessing import image as keras_image
 # streamlit cloud cant find the model, so we debug :)
 print("Current directory:", os.getcwd()) 
 
-# model = load_model('streamlit/rice_deficiency_model.h5')
-model = load_model('rice_deficiency_model.h5')
+model = load_model('streamlit/rice_deficiency_model.h5')
+# model = load_model('rice_deficiency_model.h5')
 
 classes = ['Nitrogen(N)', 'Phosphorus(P)', 'Potassium(K)']
 
